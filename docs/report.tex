@@ -4,6 +4,7 @@
 \usepackage{mathtools}
 \usepackage{enumitem}
 \usepackage{amsfonts}
+\usepackage{caption}
 \usepackage{subcaption}
 \usepackage{url}
 \usepackage{inconsolata}
@@ -53,6 +54,10 @@ The \texttt{love.update(dt)} callback is called continuously. The `dt' parameter
 
 The \texttt{love.draw()} callback continously draws images to the screen. Functions such as \texttt{love.graphics.draw()} must be called from inside this function in order to change what is displayed on the screen.
 
+\paragraph{Running the game:} To run the game, the L\"{O}VE2D runtime must first be downloaded from \texttt{http://love2d.org}. Once this is installed, the game can be run by double-clicking on ``\texttt{bloodbath.love}'', or by entering the directory via the command line and typing ``\texttt{love .}''.
+
+\paragraph{Exiting the game:} To quit the game at any time, press the escape key.
+
 \subsubsection{Lua}
 L\"{O}VE uses the Lua \cite{lua} scripting language for the programming of game logic. Lua is an `extension programming language', meaning that it only works embedded in a host client. It is an ideal scripting language for games, as its minimalistic featureset allows for extremely fast execution.
 
@@ -82,9 +87,11 @@ Player 1's health is represented by a bar in the top left corner of the screen. 
 The players can move towards and away from each other and try to punch and kick. If a player tries to attack the other player and they are close enough, the other player loses some health points, and their health bar shortens. Once a player has lost all of their health points, they `die', and the other player is declared the victor. Figure \ref{fig:screenshot} shows the game in action.
 
 \paragraph{Controls}
-Player 1 can move his character around by using the W, A, S, and D keys on the keyboard to jump, walk left, crouch and walk right respectively. The return key on the keyboard makes the character punch, the left shift key makes them kick.
+Player 1 can move their character around by using the W, A, S, and D keys on the keyboard to jump, walk left, crouch and walk right respectively. The left shift on the keyboard makes the character punch, the left control key makes them kick.
 
-Player 2 moves his character with the arrow keys, and uses the right shift and right control keys to punch and kick.
+Player 2 moves their character with the arrow keys, and uses the return and right shift keys to punch and kick.
+
+Pressing the escape key at any time quits the game.
 
 Joypad support is partially implemented, however no Linux-compatible joypads could be found for testing.
 

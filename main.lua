@@ -28,9 +28,9 @@ end
 function love.load()
     -- prevents anti-aliasing
     love.graphics.setDefaultImageFilter("nearest", "nearest")
-    --love.graphics.setMode(800,600,true) --fullscreen
+    love.graphics.setMode(800,600,true) --fullscreen
     
-    love.graphics.setMode(800,600,false) --windowed
+    --love.graphics.setMode(800,600,false) --windowed
     love.graphics.setCaption("BloodBath")
 
     -- key maps for controlling players
