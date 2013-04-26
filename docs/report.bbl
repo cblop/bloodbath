@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{blender}
+The blender project.
+\newblock \url{http://www.blender.org}.
+
+\bibitem{gimp}
+Gimp: The gnu image manipulation program.
+\newblock \url{http://www.gimp.org}.
+
+\bibitem{love2d}
+Love2d game engine.
+\newblock \url{http://love2d.org}.
+
+\bibitem{lua}
+The programming language lua.
+\newblock \url{http://www.lua.org}.
+
+\bibitem{gimpscript}
+Spritesheet from layer groups script.
+\newblock \url{http://registry.gimp.org/node/27761}.
+
+\bibitem{zlib}
+The zlib license.
+\newblock \url{http://zlib.net/zlib_license.html}.
+
+\end{thebibliography}
