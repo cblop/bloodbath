@@ -82,8 +82,8 @@ function Game:showMenu()
 
     love.graphics.print("Player 2:",550,410)
     love.graphics.print("Arrow keys: move",550,440)
-    love.graphics.print("Right shift: punch",550,460)
-    love.graphics.print("Right ctrl: kick",550,480)
+    love.graphics.print("Return: punch",550,460)
+    love.graphics.print("Right shift: kick",550,480)
 
     -- draw character faces as menu items
     local grid1 = {{220,200},{330, 200},{440,200}}

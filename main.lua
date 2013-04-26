@@ -36,7 +36,7 @@ function love.load()
     -- key maps for controlling players
     local keymap1 = {joy=false,up="w",down="s",left="a",right="d",punch="lshift",kick="lctrl"}
     --local keymap1 = {joy=false,up=",",down="o",left="a",right="e",punch="lshift",kick="lctrl"} --for dvorak
-    local keymap2 = {joy=false,up="up",down="down",left="left",right="right",punch="rshift",kick="rctrl"}
+    local keymap2 = {joy=false,up="up",down="down",left="left",right="right",punch="return",kick="rshift"}
     local keymaps = {keymap1,keymap2}
 
     -- face images for menu
