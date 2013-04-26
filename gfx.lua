@@ -1,7 +1,10 @@
 local anim8 = require "anim8"
 
+-- loads all the animations into sprite sheets,
+-- returns array of images and grids
 function loadPlayerGfx(player)
-
+    -- default player is hashim
+    -- load sprite sheets as images
     local img_rest = love.graphics.newImage("sprites/hashim/rest.png")
     local img_walk = love.graphics.newImage("sprites/hashim/walk.png")
     local img_punchl = love.graphics.newImage("sprites/hashim/punchl.png")
@@ -13,6 +16,7 @@ function loadPlayerGfx(player)
     local img_win = love.graphics.newImage("sprites/hashim/win.png")
     local img_hit_high = love.graphics.newImage("sprites/hashim/hit_high.png")
 
+    -- create grids to hold animations
     local g_rest = anim8.newGrid(100, 100, img_rest:getWidth(), img_rest:getHeight())
     local g_walk = anim8.newGrid(100, 100, img_walk:getWidth(), img_walk:getHeight())
     local g_punchl = anim8.newGrid(100, 100, img_punchl:getWidth(), img_punchl:getHeight())
@@ -24,7 +28,7 @@ function loadPlayerGfx(player)
     local g_win = anim8.newGrid(100, 100, img_win:getWidth(), img_win:getHeight())
     local g_hit_high = anim8.newGrid(100, 100, img_hit_high:getWidth(), img_hit_high:getHeight())
 
-    -- these are defaults: hash
+    -- these specify the frames from each animation file to use
     local rest = anim8.newAnimation('bounce', g_rest('1-30,1'), 0.05) 
     local walk = anim8.newAnimation('bounce', g_walk('11-30,1'), 0.03) 
     local punch_left = anim8.newAnimation('once', g_punchl('5-24,1'), 0.03) 
@@ -37,6 +41,7 @@ function loadPlayerGfx(player)
     local hit_high = anim8.newAnimation('once', g_hit_high('1-22,1'), 0.02) 
 
     if player == "wenkai" then
+        -- if player wenkai is selected, change images and anims
         img_rest = love.graphics.newImage("sprites/wenkai/rest.png")
         img_walk = love.graphics.newImage("sprites/wenkai/walk.png")
         img_punchl = love.graphics.newImage("sprites/wenkai/punchl.png")
@@ -71,6 +76,7 @@ function loadPlayerGfx(player)
         hit_high = anim8.newAnimation('once', g_hit_high('1-30,1'), 0.02) 
 
     elseif player == "matt" then
+        -- if player matt is selected, change images and anims
         img_rest = love.graphics.newImage("sprites/matt/rest.png")
         img_walk = love.graphics.newImage("sprites/matt/walk.png")
         img_punchl = love.graphics.newImage("sprites/matt/punchl.png")
@@ -106,6 +112,7 @@ function loadPlayerGfx(player)
 
     end
 
+    -- return an associative array of images and animation grids
     local anims = {rest={img_rest, rest}, walk={img_walk, walk}, punch={img_punchl, punch_left},
                     jump={img_jump, jump}, crouch={img_crouch, crouch}, crouchwalk={img_crouchwalk, crouchwalk},
                     kick={img_kick, kick}, fall={img_fall, fall}, win={img_win, win}, hit_high={img_hit_high, hit_high}}
